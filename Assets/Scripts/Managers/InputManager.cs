@@ -44,7 +44,6 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_direction);
         if (Input.GetMouseButtonDown(0))
         {
             _touchPos = Input.mousePosition.x;

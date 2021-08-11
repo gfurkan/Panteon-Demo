@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            rb.AddForce(Vector3.forward* 500);
+        }
         if (inputManager.touched)
         {
             if (!startRunning)
@@ -30,8 +34,13 @@ public class PlayerMovement : MonoBehaviour
         }
         if (startRunning)
         {
-            rb.velocity = new Vector3(0, rb.velocity.y, 1 * (float)runningSpeed) ;
-            PlayerControl(inputManager.direction);
+            if (rb.velocity.z <= 1 * (float)runningSpeed)
+            {
+                rb.velocity = new Vector3(0, rb.velocity.y, 1 * (float)runningSpeed);
+                PlayerControl(inputManager.direction);
+            }
+            else
+                rb.velocity += new Vector3(0, 0, -0.25f);  // Bonus obstacle 1.
         }
     }
     void StartRunning()
@@ -42,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void PlayerControl(float touchDirection)
     {
-        transform.position = new Vector3(transform.position.x + touchDirection * Time.deltaTime*(float)swerveSpeed, transform.position.y, transform.position.z);
+        float horizontalPosition = transform.position.x + touchDirection * Time.deltaTime * (float)swerveSpeed;
+        horizontalPosition = Mathf.Clamp(horizontalPosition, -5.5f, 5.5f);
+        transform.position = new Vector3(horizontalPosition, transform.position.y, transform.position.z);
     }
 }
