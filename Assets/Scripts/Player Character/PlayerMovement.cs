@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(rb.velocity);
         if (Input.GetMouseButtonDown(1))
         {
             rb.AddForce(Vector3.forward* 500);
@@ -34,9 +35,9 @@ public class PlayerMovement : MonoBehaviour
         }
         if (startRunning)
         {
-            if (rb.velocity.z <= 1 * (float)runningSpeed)
+            if (rb.velocity.z < (float)runningSpeed)
             {
-                rb.velocity = new Vector3(0, rb.velocity.y, 1 * (float)runningSpeed);
+                rb.velocity += new Vector3(0, 0, 0.25f);
                 PlayerControl(inputManager.direction);
             }
             else
@@ -54,5 +55,10 @@ public class PlayerMovement : MonoBehaviour
         float horizontalPosition = transform.position.x + touchDirection * Time.deltaTime * (float)swerveSpeed;
         horizontalPosition = Mathf.Clamp(horizontalPosition, -5.5f, 5.5f);
         transform.position = new Vector3(horizontalPosition, transform.position.y, transform.position.z);
+    }
+
+    public void HitRotatingStick(float verticalSpeed,float horizontalSpeed)
+    {
+        rb.AddForce(new Vector3(horizontalSpeed, 0, verticalSpeed));
     }
 }

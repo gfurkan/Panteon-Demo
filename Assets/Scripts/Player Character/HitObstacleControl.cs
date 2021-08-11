@@ -6,13 +6,15 @@ public class HitObstacleControl : MonoBehaviour
 {
     Animator animator;
     Rigidbody rb;
-    PlayerMovement playerMovement;
+    [SerializeField]
+    private PlayerMovement playerMovement;
+    [SerializeField]
+    private float verticalForce = 0,horizontalForce=0;
 
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Obstacle")
         {
-            playerMovement = GetComponent<PlayerMovement>();
             playerMovement.enabled = false;
 
             rb = GetComponent<Rigidbody>();
@@ -22,6 +24,30 @@ public class HitObstacleControl : MonoBehaviour
             animator = GetComponent<Animator>();
             animator.applyRootMotion = true;
             animator.SetBool("Death", true);
+         }
+
+        if (col.gameObject.tag == "RotatingStick")
+        {
+            Vector3 hitDistance = (transform.position - col.contacts[col.contactCount-1].point)*10;
+
+            if (hitDistance.z < 0)
+            {
+                verticalForce = -verticalForce;
+            }
+            if (hitDistance.z > 0)
+            {
+                verticalForce = Mathf.Abs(verticalForce);
+            }
+            if (hitDistance.x < 0)
+            {
+                horizontalForce = -horizontalForce;
+            }
+            if (hitDistance.x > 0)
+            {
+                horizontalForce = Mathf.Abs(horizontalForce);
+            }
+
+            playerMovement.HitRotatingStick(verticalForce, horizontalForce);
         }
     }
 }

@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
         distance = transform.position- playerCharacter.transform.position;
     }
 
-    void Update()
+    void LateUpdate()
     {
         MoveCamera();
     }
