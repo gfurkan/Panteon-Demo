@@ -8,12 +8,10 @@ public class HalfDonutMovement : MonoBehaviour
 
     private bool moveLeft = false, moveRight = false;
     private float targetxPos = 0,time = 0;
-    private double tempMovementSpeed = 0;
+    private float tempMovementSpeed = 0;
 
     [SerializeField]
-    private double movementSpeed = 0,speedDivider=0;
-    [SerializeField]
-    private float startDelay = 0;
+    private float movementSpeed = 0,speedDivider=0, startDelay = 0;
 
     void Start()
     {
@@ -23,7 +21,7 @@ public class HalfDonutMovement : MonoBehaviour
     void Update()
     {
         HalfDonutPositionControl();
-        MoveStick(targetxPos,(float)tempMovementSpeed);
+        MoveStick(targetxPos,tempMovementSpeed);
     }
     void HalfDonutPositionControl()
     {

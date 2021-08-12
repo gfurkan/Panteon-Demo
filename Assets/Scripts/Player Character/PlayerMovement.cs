@@ -9,9 +9,10 @@ public class PlayerMovement : MonoBehaviour
     InputManager inputManager;
 
     [SerializeField]
-    private double runningSpeed = 0,swerveSpeed=0;
+    private float runningSpeed = 0,swerveSpeed=0;
 
     private bool startRunning = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
            // if (rb.velocity.z < (float)runningSpeed)
           //  {
-                rb.velocity = new Vector3(0, 0, 5);
+                rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 5);
                 PlayerControl(inputManager.direction);
            // }
             //else
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void PlayerControl(float touchDirection)
     {
-        float horizontalPosition = transform.position.x + touchDirection * Time.deltaTime * (float)swerveSpeed;
+        float horizontalPosition = transform.position.x + touchDirection * Time.deltaTime * swerveSpeed;
         horizontalPosition = Mathf.Clamp(horizontalPosition, -5.5f, 5.5f);
         transform.position = new Vector3(horizontalPosition, transform.position.y, transform.position.z);
     }

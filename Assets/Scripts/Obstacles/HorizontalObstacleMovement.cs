@@ -8,7 +8,7 @@ public class HorizontalObstacleMovement : MonoBehaviour
     private float sidePosition = 0;
 
     [SerializeField]
-    private double obstacleSpeed = 0;
+    private float obstacleSpeed = 0;
 
     void Start()
     {
@@ -33,6 +33,6 @@ public class HorizontalObstacleMovement : MonoBehaviour
     }
     void MoveObstacle(float value)
     {
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(value, transform.position.y, transform.position.z), 0.5f*Time.deltaTime*(float)obstacleSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(value, transform.position.y, transform.position.z), 0.5f*Time.deltaTime*obstacleSpeed);
     }
 }
