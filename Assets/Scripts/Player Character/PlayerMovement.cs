@@ -21,11 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(rb.velocity);
-        if (Input.GetMouseButtonDown(1))
-        {
-            rb.AddForce(Vector3.forward* 500);
-        }
         if (inputManager.touched)
         {
             if (!startRunning)
@@ -35,15 +30,16 @@ public class PlayerMovement : MonoBehaviour
         }
         if (startRunning)
         {
-            if (rb.velocity.z < (float)runningSpeed)
-            {
-                rb.velocity += new Vector3(0, 0, 0.25f);
+           // if (rb.velocity.z < (float)runningSpeed)
+          //  {
+                rb.velocity = new Vector3(0, 0, 5);
                 PlayerControl(inputManager.direction);
-            }
-            else
-                rb.velocity += new Vector3(0, 0, -0.25f);  // Bonus obstacle 1.
+           // }
+            //else
+               // rb.velocity += new Vector3(0, 0, -0.25f);
         }
     }
+
     void StartRunning()
     {
         animator.SetBool("Run", true);
@@ -57,8 +53,5 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(horizontalPosition, transform.position.y, transform.position.z);
     }
 
-    public void HitRotatingStick(float verticalSpeed,float horizontalSpeed)
-    {
-        rb.AddForce(new Vector3(horizontalSpeed, 0, verticalSpeed));
-    }
+
 }
