@@ -16,7 +16,6 @@ public class RotatingStickControl : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Vector3 hitDistance = col.contacts[0].point - transform.position;
-            Debug.Log(hitDistance);
             col.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(hitDistance.x, 0, hitDistance.z));
         }
     }

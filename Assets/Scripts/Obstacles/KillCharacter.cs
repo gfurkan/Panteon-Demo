@@ -15,11 +15,12 @@ public class KillCharacter : MonoBehaviour
             Animator animator = col.gameObject.GetComponent<Animator>();
             PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
             Rigidbody rb = col.gameObject.GetComponent<Rigidbody>();
+            Collider collider = col.gameObject.GetComponent<Collider>();
 
             if (transform.tag == "Obstacle")
             {
                 animator.applyRootMotion = true;
-                Kill(playerMovement,animator,rb);
+                Kill(playerMovement,animator,rb,collider);
             }
             if (transform.tag == "Stick")
             {
@@ -41,19 +42,19 @@ public class KillCharacter : MonoBehaviour
                 {
                     horizontalForce = Mathf.Abs(horizontalForce);
                 }
+                Kill(playerMovement, animator, rb, collider);
                 HitRotatingStick(verticalForce, horizontalForce,rb);
-                Kill(playerMovement, animator, rb);
                 StartCoroutine("StopCharacter", animator);
             }
         }
     }
-    void Kill(PlayerMovement playerMovement,Animator animator,Rigidbody rb)
+    void Kill(PlayerMovement playerMovement,Animator animator,Rigidbody rb,Collider collider)
     {
         playerMovement.enabled = false;
+        rb.velocity = Vector3.zero;
         rb.useGravity = false;
-
+        collider.isTrigger = true;
         animator.SetBool("Death", true);
-        //rb.velocity = Vector3.zero;
     }
     IEnumerator StopCharacter(Animator animator)
     {

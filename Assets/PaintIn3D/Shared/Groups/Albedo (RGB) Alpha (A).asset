@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b7bb1a755a97c419261f15b7ced2ca, type: 3}
+  m_Name: Albedo (RGB) Alpha (A)
+  m_EditorClassIdentifier: 
+  index: 0
+  textureDatas:
+  - Name: Albedo
+    BlendMode:
+      Index: 0
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Texture: {fileID: 0}
+      Kernel: 1
+      Channels: {x: 1, y: 1, z: 1, w: 0}
+  - Name: Alpha
+    BlendMode:
+      Index: 7
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Texture: {fileID: 0}
+      Kernel: 1
+      Channels: {x: 0, y: 0, z: 0, w: 1}
+  shaderData: "_MainTex@GUI/Text Shader\r\n_MainTex@Hidden/FrameDebuggerRenderTargetDisplay\r\n_MainTex@Hidden/BlitCopy\r\n_MainTex@Hidden/BlitCopyDepth\r\n_MainTex@Hidden/BlitCopyWithDepth\r\n_MainTex@Hidden/BlitToDepth\r\n_MainTex@Hidden/BlitToDepth_MSAA\r\n_MainTex@Standard
+    (Specular setup)\r\n_MainTex@Standard\r\n_MainTex@Autodesk Interactive\r\n_MainTex@Hidden/Internal-DepthNormalsTexture\r\n_MainTex@Legacy
+    Shaders/VertexLit\r\n_MainTex@Legacy Shaders/Diffuse Fast\r\n_MainTex@Legacy Shaders/Diffuse\r\n_MainTex@Legacy
+    Shaders/Bumped Diffuse\r\n_MainTex@Legacy Shaders/Specular\r\n_MainTex@Legacy
+    Shaders/Bumped Specular\r\n_MainTex@Legacy Shaders/Diffuse Detail\r\n_MainTex@Legacy
+    Shaders/Self-Illumin/VertexLit\r\n_MainTex@Legacy Shaders/Self-Illumin/Diffuse\r\n_MainTex@Legacy
+    Shaders/Self-Illumin/Bumped Diffuse\r\n_MainTex@Legacy Shaders/Self-Illumin/Specular\r\n_MainTex@Legacy
+    Shaders/Self-Illumin/Bumped Specular\r\n_MainTex@Legacy Shaders/Reflective/VertexLit\r\n_MainTex@Legacy
+    Shaders/Reflective/Bumped Unlit\r\n_MainTex@Legacy Shaders/Reflective/Diffuse\r\n_MainTex@Legacy
+    Shaders/Reflective/Bumped Diffuse\r\n_MainTex@Legacy Shaders/Reflective/Bumped
+    VertexLit\r\n_MainTex@Legacy Shaders/Reflective/Specular\r\n_MainTex@Legacy Shaders/Reflective/Bumped
+    Specular\r\n_MainTex@Legacy Shaders/Transparent/VertexLit\r\n_MainTex@Legacy Shaders/Transparent/Diffuse\r\n_MainTex@Legacy
+    Shaders/Transparent/Bumped Diffuse\r\n_MainTex@Legacy Shaders/Transparent/Specular\r\n_MainTex@Legacy
+    Shaders/Transparent/Bumped Specular\r\n_MainTex@Legacy Shaders/Transparent/Cutout/VertexLit\r\n_MainTex@Legacy
+    Shaders/Transparent/Cutout/Diffuse\r\n_MainTex@Legacy Shaders/Transparent/Cutout/Bumped
+    Diffuse\r\n_MainTex@Legacy Shaders/Transparent/Cutout/Specular\r\n_MainTex@Legacy
+    Shaders/Transparent/Cutout/Bumped Specular\r\n_MainTex@Legacy Shaders/Parallax
+    Diffuse\r\n_MainTex@Legacy Shaders/Parallax Specular\r\n_MainTex@Legacy Shaders/Self-Illumin/Parallax
+    Diffuse\r\n_MainTex@Legacy Shaders/Self-Illumin/Parallax Specular\r\n_MainTex@Legacy
+    Shaders/Reflective/Parallax Diffuse\r\n_MainTex@Legacy Shaders/Reflective/Parallax
+    Specular\r\n_MainTex@Legacy Shaders/Transparent/Parallax Diffuse\r\n_MainTex@Legacy
+    Shaders/Transparent/Parallax Specular\r\n_MainTex@Legacy Shaders/Transparent/Cutout/Soft
+    Edge Unlit\r\n_MainTex@Legacy Shaders/Decal\r\n_MainTex@FX/Flare\r\n_MainTex@Skybox/Panoramic\r\n_MainTex@Legacy
+    Shaders/Particles/Additive\r\n_MainTex@Legacy Shaders/Particles/~Additive-Multiply\r\n_MainTex@Legacy
+    Shaders/Particles/Additive (Soft)\r\n_MainTex@Legacy Shaders/Particles/Alpha Blended\r\n_MainTex@Legacy
+    Shaders/Particles/Multiply\r\n_MainTex@Legacy Shaders/Particles/Multiply (Double)\r\n_MainTex@Legacy
+    Shaders/Particles/Alpha Blended Premultiply\r\n_MainTex@Legacy Shaders/Particles/VertexLit
+    Blended\r\n_MainTex@Legacy Shaders/Particles/Anim Alpha Blended\r\n_MainTex@Particles/Standard
+    Surface\r\n_MainTex@Particles/Standard Unlit\r\n_MainTex@Sprites/Diffuse\r\n_MainTex@Hidden/TerrainEngine/Details/Vertexlit\r\n_MainTex@Hidden/TerrainEngine/Details/WavingDoublePass\r\n_MainTex@Hidden/TerrainEngine/Details/BillboardWavingDoublePass\r\n_MainTex@Hidden/TerrainEngine/BillboardTree\r\n_MainTex@Hidden/TerrainEngine/CameraFacingBillboardTree\r\n_MainTex@Hidden/TerrainEngine/Splatmap/Diffuse-Base\r\n_MainTex@Nature/Terrain/Diffuse\r\n_MainTex@Legacy
+    Shaders/Lightmapped/VertexLit\r\n_MainTex@Legacy Shaders/Lightmapped/Diffuse\r\n_MainTex@Legacy
+    Shaders/Lightmapped/Bumped Diffuse\r\n_MainTex@Legacy Shaders/Lightmapped/Specular\r\n_MainTex@Legacy
+    Shaders/Lightmapped/Bumped Specular\r\n_MainTex@Hidden/Internal-GUITextureClip\r\n_MainTex@Hidden/Internal-GUITextureClipText\r\n_MainTex@Hidden/Internal-GUITexture\r\n_MainTex@Hidden/Internal-GUITextureBlit\r\n_MainTex@Hidden/Internal-GUIRoundedRect\r\n_MainTex@Hidden/Internal-UIRDefault\r\n_MainTex@Hidden/Internal-GUIRoundedRectWithColorPerBorder\r\n_MainTex@Hidden/Nature/Tree
+    Soft Occlusion Bark Rendertex\r\n_MainTex@Nature/Tree Soft Occlusion Bark\r\n_MainTex@Hidden/Nature/Tree
+    Soft Occlusion Leaves Rendertex\r\n_MainTex@Nature/Tree Soft Occlusion Leaves\r\n_MainTex@Nature/Tree
+    Creator Bark\r\n_MainTex@Nature/Tree Creator Leaves\r\n_MainTex@Hidden/Nature/Tree
+    Creator Bark Rendertex\r\n_MainTex@Hidden/Nature/Tree Creator Leaves Rendertex\r\n_MainTex@Hidden/Nature/Tree
+    Creator Bark Optimized\r\n_MainTex@Hidden/Nature/Tree Creator Leaves Optimized\r\n_MainTex@Nature/Tree
+    Creator Leaves Fast\r\n_MainTex@Hidden/Nature/Tree Creator Leaves Fast Optimized\r\n_MainTex@Hidden/Nature/Tree
+    Creator Albedo Rendertex\r\n_MainTex@Hidden/Nature/Tree Creator Normal Rendertex\r\n_MainTex@Hidden/TerrainEngine/Splatmap/Specular-Base\r\n_MainTex@Nature/Terrain/Specular\r\n_MainTex@Hidden/TerrainEngine/Splatmap/Standard-Base\r\n_MainTex@Nature/Terrain/Standard\r\n_MainTex@Mobile/VertexLit\r\n_MainTex@Mobile/Diffuse\r\n_MainTex@Mobile/Bumped
+    Diffuse\r\n_MainTex@Mobile/Bumped Specular\r\n_MainTex@Mobile/Bumped Specular
+    (1 Directional Realtime Light)\r\n_MainTex@Mobile/VertexLit (Only Directional
+    Lights)\r\n_MainTex@Mobile/Unlit (Supports Lightmap)\r\n_MainTex@Mobile/Particles/Additive\r\n_MainTex@Mobile/Particles/Alpha
+    Blended\r\n_MainTex@Mobile/Particles/VertexLit Blended\r\n_MainTex@Mobile/Particles/Multiply\r\n_MainTex@Unlit/Transparent\r\n_MainTex@Unlit/Transparent
+    Cutout\r\n_MainTex@Unlit/Texture\r\n_MainTex@Sprites/Default\r\n_MainTex@Sprites/Mask\r\n_MainTex@UI/Unlit/Transparent\r\n_MainTex@UI/Unlit/Detail\r\n_MainTex@UI/Unlit/Text\r\n_MainTex@UI/Unlit/Text
+    Detail\r\n_MainTex@UI/Lit/Transparent\r\n_MainTex@UI/Lit/Bumped\r\n_MainTex@UI/Lit/Detail\r\n_MainTex@UI/Lit/Refraction\r\n_MainTex@UI/Lit/Refraction
+    Detail\r\n_MainTex@UI/Default\r\n_MainTex@UI/Default Font\r\n_MainTex@UI/DefaultETC1\r\n_MainTex@Hidden/UI/CompositeOverdraw\r\n_MainTex@Hidden/UI/Overdraw\r\n_MainTex@Nature/SpeedTree\r\n_MainTex@Nature/SpeedTree
+    Billboard\r\n_MainTex@Nature/SpeedTree8\r\n_MainTex@Hidden/GIDebug/TextureUV\r\n_MainTex@Hidden/GIDebug/ShowLightMask\r\n_MainTex@Hidden/GIDebug/VertexColors\r\n_MainTex@Hidden/CubeBlur\r\n_MainTex@Hidden/CubeCopy\r\n_MainTex@Hidden/VR/BlitTexArraySlice\r\n_MainTex@Hidden/VR/Internal-VRDistortion\r\n_MainTex@Hidden/VR/BlitTexArraySliceToDepth\r\n_MainTex@Hidden/VR/BlitTexArraySliceToDepth_MSAA\r\n_MainTex@Hidden/Internal-ODSWorldTexture\r\n_MainTex@Hidden/Internal-CubemapToEquirect\r\n_MainTex@Hidden/VR/BlitFromTex2DToTexArraySlice\r\n_MainTex@Hidden/VideoComposite\r\n_MainTex@Hidden/VideoDecode\r\n_MainTex@Hidden/Compositing\r\n_MainTex@Hidden/TerrainEngine/PaintHeight\r\n_MainTex@Hidden/TerrainEngine/HeightBlitCopy\r\n_MainTex@Hidden/TerrainEngine/GenerateNormalmap\r\n_MainTex@Hidden/TerrainEngine/TerrainLayerUtils\r\n_MainTex@Hidden/TextCore/Distance
+    Field\r\n_MainTex@Hidden/TextCore/Distance Field SSD\r\n_MainTex@Debug/PlanarReflectionProbePreview\r\n_BASE_COLOR_MAP@HDRP/3DSMaxPhysicalMaterial/PhysicalMaterial3DsMax\r\n_BASE_COLOR_MAP@HDRP/ArnoldStandardSurface/ArnoldStandardSurface\r\n_MainTex@HDRP/Autodesk
+    Interactive/AutodeskInteractive\r\n_MainTex@HDRP/Autodesk Interactive/AutodeskInteractiveMasked\r\n_MainTex@HDRP/Autodesk
+    Interactive/AutodeskInteractiveTransparent\r\n_MainTex@HDRP/AxF\r\n_BaseColorMap@HDRP/Decal\r\n_MainTex@HDRP/LayeredLit\r\n_MainTex@HDRP/LayeredLitTessellation\r\n_BaseColorMap@HDRP/Lit\r\n_MainTex@HDRP/Lit\r\n_BaseColorMap@HDRP/LitTessellation\r\n_MainTex@HDRP/LitTessellation\r\n_MainTex@HDRP/TerrainLit\r\n_MainTex@HDRP/Unlit\r\n_MainTex@Hidden/BlitNoAlpha\r\n_MainTex@Hidden/Default
+    StaticMeshOutput\r\n_MainTex@Hidden/GUITextureBlit2SRGB\r\n_MainTex@Hidden/HDRP/TerrainLit_Basemap\r\n_MainTex@Hidden/LookDev/CubeToLatlong\r\n_MainTex@Hidden/Shadow2DRemoveSelf\r\n_MainTex@Hidden/ShadowGroup2D\r\n_MainTex@Hidden/TerrainEngine/Details/UniversalPipeline/BillboardWavingDoublePass\r\n_MainTex@Hidden/TerrainEngine/Details/UniversalPipeline/Vertexlit\r\n_MainTex@Hidden/TerrainEngine/Details/UniversalPipeline/WavingDoublePass\r\n_MainTex@Hidden/TextMeshPro/Internal/Distance
+    Field SSD\r\n_MainTex@Hidden/Universal Render Pipeline/Bloom\r\n_MainTex@Hidden/Universal
+    Render Pipeline/BokehDepthOfField\r\n_MainTex@Hidden/Universal Render Pipeline/CameraMotionBlur\r\n_MainTex@Hidden/Universal
+    Render Pipeline/GaussianDepthOfField\r\n_MainTex@Hidden/Universal Render Pipeline/PaniniProjection\r\n_MainTex@Hidden/Universal
+    Render Pipeline/Sampling\r\n_MainTex@Hidden/Universal Render Pipeline/Stop NaN\r\n_BaseMap@Hidden/Universal
+    Render Pipeline/Terrain/Lit (Add Pass)\r\n_MainTex@Hidden/Universal Render Pipeline/Terrain/Lit
+    (Base Pass)\r\n_MainTex@Lean/Common/Alpha\r\n_MainTex@Lean/Common/Object\r\n_MainTex@Paint
+    in 3D/P3D Alpha\r\n_MainTex@Paint in 3D/P3D Overlay\r\n_MainTex@Paint in 3D/P3D
+    Solid\r\n_MainTex@Paint in 3D/Shield\r\n_BASE_COLOR_MAP@Shader Graphs/ArnoldStandardSurface\r\n_BASE_COLOR_MAP@Shader
+    Graphs/ArnoldStandardSurfaceTransparent\r\n_MainTex@Shader Graphs/P3D Alpha SRP\r\n_MainTex@Shader
+    Graphs/P3D Overlay SRP\r\n_MainTex@Shader Graphs/P3D Solid SRP\r\n_BASE_COLOR_MAP@Shader
+    Graphs/PhysicalMaterial3DsMax\r\n_BASE_COLOR_MAP@Shader Graphs/PhysicalMaterial3DsMaxTransparent\r\n_MainTex@Universal
+    Render Pipeline/2D/Sprite-Lit-Default\r\n_MainTex@Universal Render Pipeline/Autodesk
+    Interactive/Autodesk Interactive\r\n_MainTex@Universal Render Pipeline/Autodesk
+    Interactive/Autodesk Interactive Masked\r\n_MainTex@Universal Render Pipeline/Autodesk
+    Interactive/Autodesk Interactive Transparent\r\n_BaseMap@Universal Render Pipeline/Baked
+    Lit\r\n_BaseMap@Universal Render Pipeline/Lit\r\n_MainTex@Universal Render Pipeline/Lit\r\n_MainTex@Universal
+    Render Pipeline/Nature/SpeedTree7\r\n_MainTex@Universal Render Pipeline/Nature/SpeedTree7
+    Billboard\r\n_MainTex@Universal Render Pipeline/Nature/SpeedTree8\r\n_BaseMap@Universal
+    Render Pipeline/Particles/Lit\r\n_BaseMap@Universal Render Pipeline/Particles/Simple
+    Lit\r\n_BaseMap@Universal Render Pipeline/Particles/Unlit\r\n_BaseMap@Universal
+    Render Pipeline/Simple Lit\r\n_MainTex@Universal Render Pipeline/Simple Lit\r\n_MainTex@Universal
+    Render Pipeline/Terrain/Lit\r\n_BaseMap@Universal Render Pipeline/Unlit\r\n_MainTex@Universal
+    Render Pipeline/Unlit\r\n_MainTex@Unlit/ARCoreBackground\r\n"

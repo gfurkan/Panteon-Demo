@@ -31,13 +31,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (startRunning)
         {
-           // if (rb.velocity.z < (float)runningSpeed)
-          //  {
-                rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 5);
-                PlayerControl(inputManager.direction);
-           // }
-            //else
-               // rb.velocity += new Vector3(0, 0, -0.25f);
+         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 5);
+         PlayerControl(inputManager.direction);
         }
     }
 
@@ -53,6 +48,4 @@ public class PlayerMovement : MonoBehaviour
         horizontalPosition = Mathf.Clamp(horizontalPosition, -5.5f, 5.5f);
         transform.position = new Vector3(horizontalPosition, transform.position.y, transform.position.z);
     }
-
-
 }
