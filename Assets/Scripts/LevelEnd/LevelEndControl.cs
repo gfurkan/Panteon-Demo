@@ -17,7 +17,8 @@ public class LevelEndControl : MonoBehaviour
             animator.applyRootMotion = true;
 
             other.gameObject.GetComponent<PlayerMovement>().enabled = false;
-            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            // other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero; *** Character flies :D
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
             Camera.main.GetComponent<CameraMovement>().enabled = false;
             Camera.main.GetComponent<MovePaintingPosition>().enabled = true;

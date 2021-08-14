@@ -9,7 +9,7 @@ public class MovePaintingPosition : MonoBehaviour
     [SerializeField]
     private GameObject paintingWall;
 
-    private float time = 0, waitingTime = 2;
+    private float time = 0, waitingTime = 4;
     private void Update()
     {
         time += Time.deltaTime;
