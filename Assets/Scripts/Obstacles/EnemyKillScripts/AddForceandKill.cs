@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AddForceandKill : MonoBehaviour
 {
@@ -9,17 +10,30 @@ public class AddForceandKill : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Player")
+
+        if (col.gameObject.layer == 8)
         {
             Animator animator = col.gameObject.GetComponent<Animator>();
-            PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
             Rigidbody rb = col.gameObject.GetComponent<Rigidbody>();
             Collider collider = col.gameObject.GetComponent<Collider>();
 
             Vector3 hitDistance = (col.gameObject.transform.position - col.contacts[col.contactCount - 1].point) * 10;
 
             SetForce(hitDistance);
-            Kill(playerMovement, animator, rb, collider);
+            if (col.gameObject.tag == "Player")
+            {
+                PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
+                playerMovement.enabled = false;
+            }
+            if (col.gameObject.tag == "Opponent")
+            {
+                NavMeshAgent agent = col.gameObject.GetComponent<NavMeshAgent>();
+                OpponentMovement opponentMovement = col.gameObject.GetComponent<OpponentMovement>();
+
+                opponentMovement.enabled = false;
+                agent.speed = 0;
+            }
+            Kill(animator, rb, collider);
             HitRotatingStick(SetForce(hitDistance).x, SetForce(hitDistance).y, rb);
             StartCoroutine("StopCharacter", animator);
         }
@@ -45,13 +59,13 @@ public class AddForceandKill : MonoBehaviour
         Vector2 force = new Vector3(horizontalForce,verticalForce);
         return force;
     }
-    void Kill(PlayerMovement playerMovement, Animator animator, Rigidbody rb, Collider collider)
+    void Kill(Animator animator, Rigidbody rb, Collider collider)
     {
-        playerMovement.enabled = false;
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
 
         collider.isTrigger = true;
+        animator.SetBool("Run", false);
         animator.SetBool("Death", true);
     }
     IEnumerator StopCharacter(Animator animator)

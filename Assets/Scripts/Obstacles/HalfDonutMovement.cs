@@ -11,7 +11,7 @@ public class HalfDonutMovement : MonoBehaviour
     private float tempMovementSpeed = 0;
 
     [SerializeField]
-    private float movementSpeed = 0,speedDivider=0, startDelay = 0;
+    private float movementSpeed = 0,speedDivider=0, startDelay = 0,moveBackSpeed=0;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class HalfDonutMovement : MonoBehaviour
         if (stick.transform.localPosition.x == -0.12f)
         {
             targetxPos = 0.15f;
-            tempMovementSpeed = movementSpeed / speedDivider;
+            tempMovementSpeed = moveBackSpeed;
         }
     }
     void MoveStick(float targetXPosition,float movementSpeed)

@@ -17,7 +17,7 @@ public class RotatingPlatformMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.layer == 8)
         {
             Rigidbody rb = col.gameObject.GetComponent<Rigidbody>();
             rb.velocity = new Vector3(velocityToAdd, rb.velocity.y,rb.velocity.z);

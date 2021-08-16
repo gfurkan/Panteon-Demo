@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class HorizontalObstacleMovement : MonoBehaviour
 {
-    private bool moveLeft = false, moveRight = false;
-    private float sidePosition = 0;
-
     [SerializeField]
-    private float obstacleSpeed = 0;
+    private float movementDelay = 0, obstacleSpeed = 0;
 
-    void Start()
-    {
-        
-    }
+    private bool moveLeft = false, moveRight = false;
+    private float sidePosition = 0,time=0;
 
     void Update()
     {
@@ -33,6 +28,10 @@ public class HorizontalObstacleMovement : MonoBehaviour
     }
     void MoveObstacle(float value)
     {
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(value, transform.position.y, transform.position.z), 0.5f*Time.deltaTime*obstacleSpeed);
+        time += Time.deltaTime;
+        if (time > movementDelay)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(value, transform.position.y, transform.position.z), 0.5f * Time.deltaTime * obstacleSpeed);
+        }
     }
 }
