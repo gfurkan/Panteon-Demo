@@ -25,11 +25,9 @@ public class RespawnOpponent : MonoBehaviour
         animator.SetBool("Idle", true);
         animator.SetBool("Death", false);
         animator.SetBool("Run", true);
-        //animator.SetBool("Idle", false);
 
         Collider col = GetComponent<Collider>();
         col.isTrigger = false;
-
 
         agent.speed = agentSpeed;
 

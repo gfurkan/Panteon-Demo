@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class LevelEndControl : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8)
@@ -19,8 +18,8 @@ public class LevelEndControl : MonoBehaviour
            
             if (other.gameObject.tag == "Player")
             {
+                other.gameObject.GetComponent<PlayerRank>().sortRanks = false;
                 other.gameObject.GetComponent<PlayerMovement>().enabled = false;
-                // other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero; *** Character flies :D
                 other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
                 Camera.main.GetComponent<CameraMovement>().enabled = false;
@@ -28,6 +27,10 @@ public class LevelEndControl : MonoBehaviour
             }
             if (other.gameObject.tag == "Opponent")
             {
+                PlayerRank player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRank>();
+                player.DecreaseListLength(other.gameObject);
+
+                other.gameObject.GetComponent<Collider>().enabled = false;
                 other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
                 other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
