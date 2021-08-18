@@ -974,6 +974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 9044116528138769508}
   endPosition: {fileID: 0}
+  start: 0
+  agentSpeed: 4
 --- !u!114 &9044116528138769509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,7 +998,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 4.75
+  m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240

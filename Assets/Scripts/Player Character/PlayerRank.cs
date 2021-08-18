@@ -34,7 +34,7 @@ public class PlayerRank : MonoBehaviour
         {
             BubbleSort();
         }
-        rankingText.text = (System.Array.IndexOf(characters.ToArray(), transform.gameObject) + lengthSizeContoller).ToString();
+        rankingText.text = (System.Array.IndexOf(characters.ToArray(), transform.gameObject) + lengthSizeContoller).ToString() + ".";
     }
     void BubbleSort()
     {

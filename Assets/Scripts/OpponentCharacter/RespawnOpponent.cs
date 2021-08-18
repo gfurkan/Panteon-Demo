@@ -7,13 +7,12 @@ public class RespawnOpponent : MonoBehaviour
 {
     NavMeshAgent agent;
     Vector3 startPosition;
-    float agentSpeed = 0;
+    float agentSpeed = 4;
 
     private void Start()
     {
         startPosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
-        agentSpeed = agent.speed;
     }
     public void RespawnCharacter()
     {
