@@ -5,6 +5,12 @@ using UnityEngine.AI;
 
 public class StopandKill : MonoBehaviour
 {
+    LevelManager levelManager;
+
+    private void Start()
+    {
+        levelManager = LevelManager.Instance;
+    }
 
     private void OnCollisionEnter(Collision col)
     {
@@ -19,6 +25,7 @@ public class StopandKill : MonoBehaviour
             {
                 PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.enabled = false;
+                levelManager.levelFail = true;
             }
             if (col.gameObject.tag == "Opponent")
             {

@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class AddForceandKill : MonoBehaviour
 {
-    [SerializeField]
-    private float verticalForce = 0, horizontalForce = 0;
+    [SerializeField] private float verticalForce = 0, horizontalForce = 0;
+    LevelManager levelManager;
 
+    private void Start()
+    {
+        levelManager = LevelManager.Instance;
+    }
     private void OnCollisionEnter(Collision col)
     {
 
@@ -18,12 +22,13 @@ public class AddForceandKill : MonoBehaviour
             Collider collider = col.gameObject.GetComponent<Collider>();
 
             Vector3 hitDistance = (col.gameObject.transform.position - col.contacts[col.contactCount - 1].point) * 10;
-
             SetForce(hitDistance);
+
             if (col.gameObject.tag == "Player")
             {
                 PlayerMovement playerMovement = col.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.enabled = false;
+                levelManager.levelFail = true;
             }
             if (col.gameObject.tag == "Opponent")
             {
@@ -34,7 +39,7 @@ public class AddForceandKill : MonoBehaviour
                 agent.speed = 0;
             }
             Kill(animator, rb, collider);
-            HitRotatingStick(SetForce(hitDistance).x, SetForce(hitDistance).y, rb);
+            PushCharacter(SetForce(hitDistance).x, SetForce(hitDistance).y, rb);
             StartCoroutine("StopCharacter", animator);
         }
     }
@@ -74,7 +79,7 @@ public class AddForceandKill : MonoBehaviour
         animator.applyRootMotion = true;
 
     }
-    void HitRotatingStick(float horizontalForce, float verticalForce, Rigidbody rb)
+    void PushCharacter(float horizontalForce, float verticalForce, Rigidbody rb)
     {
         rb.AddForce(new Vector3(horizontalForce, 0, verticalForce));
     }

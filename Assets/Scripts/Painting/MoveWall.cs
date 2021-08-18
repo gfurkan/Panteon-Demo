@@ -6,12 +6,9 @@ using UnityEngine.UI;
 
 public class MoveWall : MonoBehaviour
 {
-    [SerializeField]
-    private Transform wallPosition;
-    [SerializeField]
-    private GameObject painter;
-    [SerializeField]
-    private Text percentageText;
+    [SerializeField] private Transform wallPosition;
+    [SerializeField] private GameObject painter;
+    [SerializeField] private Text percentageText;
 
     void Update()
     {

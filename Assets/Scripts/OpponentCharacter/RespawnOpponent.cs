@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class RespawnOpponent : MonoBehaviour
 {
-    NavMeshAgent agent;
-    Vector3 startPosition;
-    float agentSpeed = 4;
+    private NavMeshAgent agent;
+    private Vector3 startPosition;
+    private float agentSpeed = 4;
 
     private void Start()
     {

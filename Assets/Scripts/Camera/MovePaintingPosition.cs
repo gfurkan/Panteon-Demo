@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class MovePaintingPosition : MonoBehaviour
 {
-    [SerializeField]
-    private Transform cameraPosition;
-    [SerializeField]
-    private GameObject paintingWall;
+    [SerializeField] private Transform cameraPosition;
+    [SerializeField] private GameObject paintingWall;
 
     private float time = 0, waitingTime = 4;
-    private void Update()
+
+    private void LateUpdate()
     {
         time += Time.deltaTime;
         if (time > waitingTime)

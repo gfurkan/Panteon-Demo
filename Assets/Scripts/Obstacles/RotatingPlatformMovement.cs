@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RotatingPlatformMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float rotatingSpeed = 0,velocityToAdd=0;
+    [SerializeField] private float rotatingSpeed = 0, velocityToAdd = 0;
 
     void Update()
     {

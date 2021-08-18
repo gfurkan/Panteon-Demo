@@ -7,11 +7,9 @@ public class HalfDonutMovement : MonoBehaviour
     private GameObject stick;
 
     private bool moveLeft = false, moveRight = false;
-    private float targetxPos = 0,time = 0;
-    private float tempMovementSpeed = 0;
+    private float targetxPos = 0,time = 0, tempMovementSpeed = 0;
 
-    [SerializeField]
-    private float movementSpeed = 0,speedDivider=0, startDelay = 0,moveBackSpeed=0;
+    [SerializeField] private float movementSpeed = 0, speedDivider = 0, startDelay = 0, moveBackSpeed = 0;
 
     void Start()
     {

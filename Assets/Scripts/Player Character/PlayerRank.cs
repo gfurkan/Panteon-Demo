@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerRank : MonoBehaviour
 {
-    [SerializeField]
-    private List<GameObject> characters;
-    [SerializeField]
-    private Text rankingText;
+    [SerializeField] private List<GameObject> characters;
+    [SerializeField] private Text rankingText;
 
-    int lengthSizeContoller = 1;
+    private int lengthSizeContoller = 1;
     private bool _sortRanks = true;
+
     public bool sortRanks
     {
         get

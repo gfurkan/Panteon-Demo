@@ -7,6 +7,9 @@ TagManager:
   - Obstacle
   - Stick
   - Opponent
+  - ReplayButton
+  - NextLevelButton
+  - RotatingPlatform
   layers:
   - Default
   - TransparentFX

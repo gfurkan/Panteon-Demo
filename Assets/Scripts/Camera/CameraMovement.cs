@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject playerCharacter;
+    [SerializeField] private GameObject playerCharacter;
     private Vector3 distance;
 
     void Start()

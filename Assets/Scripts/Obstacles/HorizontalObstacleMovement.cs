@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class HorizontalObstacleMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float movementDelay = 0, obstacleSpeed = 0;
+    [SerializeField] private float movementDelay = 0, obstacleSpeed = 0;
 
     private bool moveLeft = false, moveRight = false;
     private float sidePosition = 0,time=0;
