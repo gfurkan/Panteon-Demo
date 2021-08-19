@@ -33,9 +33,6 @@ public class AddForceandKill : MonoBehaviour
             if (col.gameObject.tag == "Opponent")
             {
                 NavMeshAgent agent = col.gameObject.GetComponent<NavMeshAgent>();
-                OpponentMovement opponentMovement = col.gameObject.GetComponent<OpponentMovement>();
-
-                opponentMovement.enabled = false;
                 agent.speed = 0;
             }
             Kill(animator, rb, collider);

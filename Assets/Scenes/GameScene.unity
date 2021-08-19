@@ -137,7 +137,7 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[0]
       value: 
-      objectReference: {fileID: 8370437912572858123, guid: f49989d191057d34bbb086d570610e5e,
+      objectReference: {fileID: 6824263275560835009, guid: dd2c569c23b7fdc4b811f215f77e0200,
         type: 3}
     - target: {fileID: 5493558665931199009, guid: 79278a3fc18636d4fb9d6056a0035b9d,
         type: 3}
@@ -203,6 +203,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493558667471521583, guid: 79278a3fc18636d4fb9d6056a0035b9d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493558667471521583, guid: 79278a3fc18636d4fb9d6056a0035b9d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493558667471521583, guid: 79278a3fc18636d4fb9d6056a0035b9d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79278a3fc18636d4fb9d6056a0035b9d, type: 3}

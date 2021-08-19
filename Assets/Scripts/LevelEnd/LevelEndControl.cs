@@ -30,9 +30,10 @@ public class LevelEndControl : MonoBehaviour
                 PlayerRank player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRank>();
                 player.DecreaseListLength(other.gameObject);
 
-                other.gameObject.GetComponent<Collider>().enabled = false;
-                other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
                 other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                other.gameObject.GetComponent<Collider>().enabled = false;
+                //other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
             }
         }
     }

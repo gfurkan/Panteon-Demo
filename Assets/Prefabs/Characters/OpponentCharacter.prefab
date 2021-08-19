@@ -974,8 +974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 9044116528138769508}
   endPosition: {fileID: 0}
-  start: 0
-  agentSpeed: 4
+  agentSpeed: 5
+  speed: {x: 0, y: 0, z: 0}
 --- !u!114 &9044116528138769509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,10 +1052,10 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9044116528138769515}
-  m_Material: {fileID: 13400000, guid: 88dcbf00f920b9548a614a8166f053b5, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.6242132
-  m_Height: 2.5265715
+  m_Height: 2.5109043
   m_Direction: 1
-  m_Center: {x: 0, y: 1.1968082, z: 0.002342105}
+  m_Center: {x: 0, y: 1.2046418, z: 0.002342105}

@@ -6,8 +6,8 @@ public class MovePaintingPosition : MonoBehaviour
 {
     [SerializeField] private Transform cameraPosition;
     [SerializeField] private GameObject paintingWall;
-
-    private float time = 0, waitingTime = 4;
+    [SerializeField] private float waitingTime = 0;
+    private float time = 0;
 
     private void LateUpdate()
     {

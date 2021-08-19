@@ -1033,6 +1033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
         type: 3}
+      propertyPath: waitingDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
+        type: 3}
       propertyPath: moveBackSpeed
       value: 0.8
       objectReference: {fileID: 0}
@@ -1188,7 +1193,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3795264322584643045, guid: 2ddf2f935a955b645b88632bca8f56b2,
         type: 3}
+      propertyPath: format
+      value: '%{PERCENT}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795264322584643045, guid: 2ddf2f935a955b645b88632bca8f56b2,
+        type: 3}
       propertyPath: channel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795264322584643047, guid: 2ddf2f935a955b645b88632bca8f56b2,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3795264322584643048, guid: 2ddf2f935a955b645b88632bca8f56b2,
@@ -1279,7 +1294,7 @@ PrefabInstance:
     - target: {fileID: 3795264322584643048, guid: 2ddf2f935a955b645b88632bca8f56b2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 3795264322584643048, guid: 2ddf2f935a955b645b88632bca8f56b2,
         type: 3}
@@ -1573,6 +1588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startDelay
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
+        type: 3}
+      propertyPath: waitingDelay
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
         type: 3}
@@ -2244,6 +2264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
         type: 3}
+      propertyPath: waitingDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
+        type: 3}
       propertyPath: moveBackSpeed
       value: 1.2
       objectReference: {fileID: 0}
@@ -2783,6 +2808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
+        type: 3}
+      propertyPath: waitingDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2116269003801913741, guid: 6484011ba9a1ee94ab20a234b8695a72,
         type: 3}

@@ -10,6 +10,7 @@ TagManager:
   - ReplayButton
   - NextLevelButton
   - RotatingPlatform
+  - Road
   layers:
   - Default
   - TransparentFX

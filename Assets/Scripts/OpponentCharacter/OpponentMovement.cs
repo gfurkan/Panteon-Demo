@@ -31,4 +31,12 @@ public class OpponentMovement : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Road")
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
+        }
+    }
 }

@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class RespawnOpponent : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    NavMeshAgent agent;
+    Rigidbody rb;
     private Vector3 startPosition;
     private float agentSpeed = 4;
 
@@ -13,11 +14,13 @@ public class RespawnOpponent : MonoBehaviour
     {
         startPosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
     }
     public void RespawnCharacter()
     {
         transform.position = startPosition;
 
+        rb.useGravity = true;
         Animator animator = GetComponent<Animator>();
         animator.applyRootMotion = false;
 

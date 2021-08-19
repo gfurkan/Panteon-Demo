@@ -313,6 +313,7 @@ MonoBehaviour:
   speedDivider: 25
   startDelay: 0.3
   moveBackSpeed: 0.6
+  waitingDelay: 0
 --- !u!1 &6688723325026299802
 GameObject:
   m_ObjectHideFlags: 0

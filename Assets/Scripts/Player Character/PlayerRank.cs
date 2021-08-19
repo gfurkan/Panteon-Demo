@@ -50,7 +50,7 @@ public class PlayerRank : MonoBehaviour
             }
         }
     }
-    public void DecreaseListLength(GameObject character)
+    public void DecreaseListLength(GameObject character) // Called in LevelEndControl class.
     {
         if (_sortRanks)
         {
